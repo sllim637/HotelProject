@@ -17,39 +17,73 @@ namespace tutorialProject.Repository
             _db = _context.Set<T>();
         }
 
-        public Task Delete(int id)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            var entity = await _db.FindAsync(id);
+            _db.Remove(entity);
         }
 
         public void DeleteRange(IEnumerable<T> entities)
         {
-            throw new NotImplementedException();
+            _db.RemoveRange(entities);
         }
 
-        public Task<T> Get(Expression<Func<T, bool>> expression, List<string> includes = null)
+        public async Task<T> Get(Expression<Func<T, bool>> expression, List<string> includes = null)
         {
-            throw new NotImplementedException();
+            IQueryable<T> query = _db;
+            //if i have the foreign key and the includes not equal tio null load it with the entity
+            if (includes != null)
+            {
+                foreach(var includePropery in includes)
+                {
+                    query = query.Include(includePropery);
+                }
+            }
+            return await query.AsNoTracking().FirstOrDefaultAsync(expression);
         }
 
-        public Task<IList<T>> GetAll(Expression<Func<T, bool>> expression = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, List<string> includes = null)
+        public async Task<IList<T>> GetAll(Expression<Func<T, bool>> expression = null,
+            Func<IQueryable<T>,
+            IOrderedQueryable<T>> orderBy = null, List<string> includes = null)
         {
-            throw new NotImplementedException();
+            IQueryable<T> query = _db;
+
+            //if i have the foreign key and the includes not equal tio null load it with the entity
+            if (includes != null)
+            {
+                
+                    query = query.Where(expression);
+                
+            }
+            if (includes != null)
+            {
+                foreach (var includePropery in includes)
+                {
+                    query = query.Include(includePropery);
+                }
+            }
+            if(orderBy != null)
+            {
+                query = orderBy(query);
+            }
+            return await query.AsNoTracking().ToListAsync();
         }
 
-        public Task Insert(T entity)
+        public async Task Insert(T entity)
         {
-            throw new NotImplementedException();
+            await _db.AddAsync(entity);
         }
 
-        public Task InsertRange(IEnumerable<T> entities)
+        public async Task InsertRange(IEnumerable<T> entities)
         {
             throw new NotImplementedException();
         }
 
         public void Update(T entity)
         {
-            throw new NotImplementedException();
+            _db.Attach(entity);
+            // to tell that the entityt which is attached is modified
+            _context.Entry(entity).State = EntityState.Modified;
         }
     }
 }

@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "pRKHX+HooG/LftrbLNldsyz0+NPLqyyW06UiTe/yxS3ac+LJcUVEc812Qrk69w6EM10aF+p5sBd1khr9uj5xjw==",
+  "dgSpecHash": "aCF9Tjb7pR7H8iYr6qHLbU65bu8MxM1fSNRfjuQKWBYnLkbLysbTtvCs+ST8YqrGYg67NpI4CY8HU/Ar1KqfOg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\slim\\Desktop\\firstProject\\tutorialProject\\tutorialProject\\tutorialProject.csproj",
+  "projectFilePath": "C:\\projects\\HotelProject\\HotelProject\\tutorialProject\\tutorialProject.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\slim\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\slim\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\slim\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\slim\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\slim\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\slim\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\slim\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\slim\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.6\\microsoft.entityframeworkcore.6.0.6.nupkg.sha512",

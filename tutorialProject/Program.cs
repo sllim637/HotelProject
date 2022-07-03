@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using tutorialProject.Configurations;
 using tutorialProject.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("hotelsDbConnectionString")));
-
+builder.Services.AddAutoMapper(typeof(MapperInitilizer));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

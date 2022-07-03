@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\slim\\Desktop\\firstProject\\tutorialProject\\tutorialProject\\tutorialProject.csproj": {}
+    "C:\\projects\\HotelProject\\HotelProject\\tutorialProject\\tutorialProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\slim\\Desktop\\firstProject\\tutorialProject\\tutorialProject\\tutorialProject.csproj": {
+    "C:\\projects\\HotelProject\\HotelProject\\tutorialProject\\tutorialProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\slim\\Desktop\\firstProject\\tutorialProject\\tutorialProject\\tutorialProject.csproj",
+        "projectUniqueName": "C:\\projects\\HotelProject\\HotelProject\\tutorialProject\\tutorialProject.csproj",
         "projectName": "tutorialProject",
-        "projectPath": "C:\\Users\\slim\\Desktop\\firstProject\\tutorialProject\\tutorialProject\\tutorialProject.csproj",
+        "projectPath": "C:\\projects\\HotelProject\\HotelProject\\tutorialProject\\tutorialProject.csproj",
         "packagesPath": "C:\\Users\\slim\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\slim\\Desktop\\firstProject\\tutorialProject\\tutorialProject\\obj\\",
+        "outputPath": "C:\\projects\\HotelProject\\HotelProject\\tutorialProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\slim\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.6, )"
